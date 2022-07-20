@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.welcome.WelcomeActivity"
+    android:background="@color/white"
+    >
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="0dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="0dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="-30dp"
+        android:layout_marginEnd="-30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/welcome_img"
+            android:layout_width="match_parent"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="30dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+
+            android:src="@mipmap/welcome"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ImageView
+        android:id="@+id/welcome_logo"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card"
+        android:src="@mipmap/logo"
+        android:layout_marginTop="50dp"
+        />
+
+    <ImageView
+        android:id="@+id/welcome_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcome_logo"
+        android:src="@mipmap/leader"
+        android:layout_marginTop="50dp"
+        />
+
+    <TextView
+        android:id="@+id/btn_se_connect"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Se connecter"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="16dp"
+        app:fontFamily="@font/poppins_medium"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/btn_connect_shape"
+        app:layout_constraintBottom_toTopOf="@id/btn_se_creer"
+        />
+
+    <TextView
+        android:id="@+id/btn_se_creer"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Créer un compte"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:textSize="16dp"
+        app:fontFamily="@font/poppins_medium"
+        android:background="@drawable/btn_creer_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.ajicreative.apps.hubpro.ui.home.home
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.ajicreative.apps.hubpro.R
@@ -8,6 +9,8 @@ import com.ajicreative.apps.hubpro.ui.CategoryModel
 class HomeFragmentViewModel:ViewModel() {
 
     val categoriesMutableLiveData : MutableLiveData<MutableList<CategoryModel>> = MutableLiveData()
+    val toggleDrawer  : MutableLiveData<Boolean> = MutableLiveData()
+    val toggleLiveData : LiveData<Boolean> = toggleDrawer
     fun fetchCategories(){
         val categories = mutableListOf<CategoryModel>()
         categories.apply {
@@ -18,5 +21,9 @@ class HomeFragmentViewModel:ViewModel() {
         }
 
         categoriesMutableLiveData.value = categories
+    }
+
+    fun toggleDrawer() {
+        toggleDrawer.value = true
     }
 }
